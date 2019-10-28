@@ -1,4 +1,4 @@
-
+{{!-- 
 <h3>Uneaten Burgers</h3>
 <ul>
     {{#each burgers}}
@@ -22,9 +22,56 @@
     <li>{{burger_name}}</li>
     {{/if}}
     {{/each}}
-</ul>
+</ul> --}}
 
-<form action="/burger/create" method="post">
+
+<div class="row">
+  <center>
+    <!-- Left side (ready to eat) -->
+    <div class="col-md-6">
+      <h4 class="red_font">Ready to eat!</h4>
+      <div id="ready_to_eat">
+
+        <!-- Dynamically Insert Ready Burgers Here -->
+        {{#each burgers}}
+          {{#unless devoured}}
+          <form action="burger/eat/{{id}}" method="POST">
+            <div class="input-group">
+              <li class="form-control">{{id}}. {{burger_name}}</li>
+                <span class="input-group-btn">
+                  <button class="btn btn-success devour-button" type="submit">Eat!</button>
+                </span>
+            </div>
+          </form>
+          {{/unless}}
+        {{/each}}
+
+      </div>
+    </div>
+
+    <!-- Right side (already eaten) -->
+    <div class="col-md-6">
+      <h4 class="red_font">Already eaten!</h4>
+      <div id="already_eaten">
+
+        <!-- Dynamically Insert Eaten Burgers Here -->
+        {{#each burgers}}
+          {{#if this.devoured}}
+            <div class="input-group">
+              <li class="form-control">{{this.id}}. {{this.burger_name}}</li>
+            </div>
+          {{/if}}
+        {{/each}}
+
+      </div>
+    </div>
+  </center>
+</div>
+
+
+
+
+{{!-- <form action="/burger/create" method="post">
     Type: <input type="text" name="burger_name" id=""><br />
     <input type="submit" value="Add Burger">
-</form>
+</form> --}}
