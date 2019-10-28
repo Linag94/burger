@@ -1,4 +1,4 @@
-# :hamburger:Good Burger Application
+# Good Burger Application
 
 ## Description
 
@@ -13,10 +13,11 @@
 ## Installation
 
 To install the application follow the instructions below:
-    cd document/
-	git clone git@github.com:Linag94/burger.git
-	cd burger/
-	npm install
+
+    -cd document/
+	-git clone git@github.com:Linag94/burger.git/
+	-cd burger/
+	-npm install
 	
 ## Running Locally
 
