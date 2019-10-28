@@ -7,7 +7,7 @@ var burger =
 
   selectAll: function(callback)
   {
-    orm.selectAll(function(res)
+    orm.selectAll("burgers", function(res)
     {
       callback(res);
     });
@@ -15,7 +15,9 @@ var burger =
 
   insertOne: function(burger_name, callback)
   {
-    orm.insertOne(burger_name, function(res)
+    var cols = ["burger_name", "devoured"]
+    var vals = [burger_name, 0]
+    orm.insertOne("burgers", cols, vals, function(res)
     {
       callback(res);
     });

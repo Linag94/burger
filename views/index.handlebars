@@ -1,3 +1,30 @@
-{{#each burgers}}
-    {{burger_name}}
-{{/each}}
+
+<h3>Uneaten Burgers</h3>
+<ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    <li>
+        {{burger_name}}
+        <form action="/burger/eat/{{id}}" method="post">
+            <input type="hidden" name="devoured" value="{{devoured}}">
+            <input type="submit" value="Eat">
+        </form>
+
+
+    </li>
+    {{/unless}}
+    {{/each}}
+</ul>
+<h3>Eaten Burgers</h3>
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    <li>{{burger_name}}</li>
+    {{/if}}
+    {{/each}}
+</ul>
+
+<form action="/burger/create" method="post">
+    Type: <input type="text" name="burger_name" id=""><br />
+    <input type="submit" value="Add Burger">
+</form>

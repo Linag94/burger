@@ -22,6 +22,8 @@ router.get('/index', function (req, res)
   });
 });
 
+
+
 // Create a New Burger
 router.post('/burger/create', function (req, res) 
 {
