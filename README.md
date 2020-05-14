@@ -33,5 +33,5 @@ The application will now be running locally on `PORT`, in this case that is port
 
 ## Screenshots
 
-![](images\Screenshot%20(2).png)
-![](images\Screenshot%20(3).png)
+![](https://i.ibb.co/2gzZFWg/Screenshot-2.png)
+
