@@ -2,7 +2,7 @@
 
 ## Description
 
-*Good Burger* is a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!).
+*Good Burger* is a burger logger with MySQL, Node.js, Express, Handlebars and a homemade ORM (yum!).
 
 *Good Burger* application is a play off the movie Good Burger made in 1997. This application represents the main character Ed played by Kenan Thompson taking a customers order. The application is implemented using a [ORM](https://www.npmjs.com/package/orm), [Node.js](https://nodejs.org/en/),[Handlebars](http://handlebarsjs.com/installation.html), [Express](expressjs.com/) and [Jawsdb](https://www.jawsdb.com/) servers on the back end.
 
